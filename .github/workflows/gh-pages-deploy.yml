@@ -14,5 +14,7 @@ jobs:
             node-version: '12'
         - name: Install packages
           run: npm i
+        - name: Set Creds
+            run: git config user.name "Github Actions" && git config user.email "cicd@privatebutts.dev"
         - name: Deploy
           run: npm run deploy
