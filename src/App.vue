@@ -1,15 +1,21 @@
 <template>
-    <div id="app" class="container">
-        <label>Configure Exclusions</label>
-        <letter-select v-model="filterExclude" selected-class="selected-red"></letter-select>
+    <div id="app" class="container mt-3">
+        <h1>Wordle Hints</h1>
+        <div class="row">
+            <div class="col-lg">
+                <label>Configure Exclusions</label>
+                <letter-select v-model="filterExclude" selected-class="selected-red"></letter-select>
 
-        <label>Configure Locked in letter</label>
-        <letter-select v-model="filterInclude" selected-class="selected-green"></letter-select>
-
-        <h3>{{ solutions.length }} Possible Solutions</h3>
-        <ul>
-            <li v-for="s in solutions" :key="s">{{s}}</li>
-        </ul>
+                <label class="mt-2">Configure locked in letters</label>
+                <letter-select v-model="filterInclude" selected-class="selected-green"></letter-select>
+            </div>
+            <div class="col-lg">
+                <h3 class="mt-3">{{ solutions.length }} Possible Solutions</h3>
+                <ul>
+                    <li v-for="s in solutions" :key="s">{{s}}</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </template>
 
