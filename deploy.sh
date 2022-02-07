@@ -8,6 +8,7 @@ cd dist
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 git init
+git config user.name "Github Actions" && git config user.email "cicd@privatebutts.dev"
 git add -A
 git commit -m 'deploy'
 git push -f git@github.com:PrivateButts/wordle-hints.git master:gh-pages
