@@ -1,5 +1,7 @@
 # wordle-hints
 
+View online! https://privatebutts.github.io/wordle-hints/
+
 ## Project setup
 ```
 npm install
