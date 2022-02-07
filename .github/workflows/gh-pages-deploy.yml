@@ -14,7 +14,10 @@ jobs:
             node-version: '12'
         - name: Install packages
           run: npm i
-        - name: Set Creds
-          run: git config user.name "Github Actions" && git config user.email "cicd@privatebutts.dev"
-        - name: Deploy
-          run: npm run deploy
+        - name: Build 🔧
+          run: npm run build
+        - name: Deploy 🚀
+          uses: JamesIves/github-pages-deploy-action@v4.2.3
+          with:
+            branch: gh-pages # The branch the action should deploy to.
+            folder: dist # The folder the action should deploy.
